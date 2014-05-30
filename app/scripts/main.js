@@ -55,8 +55,9 @@ $('button').click(function () {
 	var message = $('input').val();
 	var rightNow = moment().format('X')*1000;
 	var name = 'JD';
-	$.post('http://tiny-pizza-server.herokuapp.com/collections/chat-messages', {'user': name , 'time': rightNow, 'message': message});
-
+	// $.post('http://tiny-pizza-server.herokuapp.com/collections/chat-messages', {'user': name , 'time': rightNow, 'message': message});
+	$('input').val('');
+	$('input').focus();
 })
 
 
@@ -87,4 +88,4 @@ $('button').click(function () {
 
 // <script>alert('MWAHAHAHA')</script>
 
-// http://i.giftrunk.com/d3fqzq.gif
+// 
