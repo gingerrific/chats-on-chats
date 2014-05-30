@@ -68,7 +68,8 @@ $blue: #66D9EF;
     & .username {
         width: 15%;
         vertical-align: top;
-        color: $blue;   
+        color: $blue;  
+        overflow: scroll; 
     }
 
     & .message {

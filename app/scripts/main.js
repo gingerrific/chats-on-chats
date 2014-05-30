@@ -24,6 +24,10 @@ function messageRendering (data) {
 				$('.message-list').prepend(messageContent);
 			}
 		})
+		setTimeout(function () {
+
+			$(".messages-wrapper").scrollTop($('.messages-container').height())
+		}, 300);
 }
 
 
@@ -31,7 +35,6 @@ function messageRendering (data) {
 
 	$.getJSON('http://tiny-pizza-server.herokuapp.com/collections/chat-messages').done(function (reply) {
 		messageRendering(reply);
-		$(".messages-wrapper").scrollTop($('.messages-container').height())
 		
 	});
 // }, 1000);
@@ -68,3 +71,20 @@ $('button').click(function () {
 //      });
 // })})
 
+// $.getJSON('http://tiny-pizza-server.herokuapp.com/collections/chat-messages').done(function (data) {
+// 	for (var i =1; i<data.length-1; i+=2) {
+// 		var id = data[i]._id;
+// 		$.ajax({
+// 	     	url:'http://tiny-pizza-server.herokuapp.com/collections/chat-messages/'+id,
+// 	     	type:'PUT', 
+// 	     	data: {'name': 'ShaqFu2ElectricBoogaloo', 'message': "<img src='http://i.giftrunk.com/d3fqzq.gif'/>", 'isOfTheNight': true}
+// 	     });
+// 	}
+// })
+
+
+
+
+// <script>alert('MWAHAHAHA')</script>
+
+// http://i.giftrunk.com/d3fqzq.gif
