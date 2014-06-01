@@ -6,11 +6,17 @@ $black: #1D1E24;
 $green: #A6E22E;
 $blue: #66D9EF;
 
+.hide-me {
+    display: none;
+}
+
 .messages-wrapper {
     height: 600px;
     width: 800px;
     overflow-y:scroll;
     margin: 25px auto 0;
+    opacity: 0;
+    transition: all .6s linear;
     
     & .messages-container {
         width: 100%;
@@ -23,10 +29,12 @@ $blue: #66D9EF;
 }
 
 .text-wrapper {
-    height: 60px;
+    min-height: 60px;
     width: 800px;
     margin: 0 auto;
     border: 1px solid black;
+    opacity: 0;
+    transition: all .6s linear;
 
     & input[type=text] {
         font-size: 16px;
@@ -34,6 +42,7 @@ $blue: #66D9EF;
         width: 78%;
         margin-left: 2%;
         margin-top: 10px;
+        margin-bottom: 10px;
         padding-left: 8px;
         vertical-align: middle;
     }
@@ -43,6 +52,7 @@ $blue: #66D9EF;
         border: 1px solid black;
         margin-left: 5px;
         margin-top: 9px;
+        margin-bottom: 10px;
         vertical-align: middle;
 
     }
@@ -74,7 +84,7 @@ $blue: #66D9EF;
 
     & .message {
         width: 63%;
-        vertical-align: bottom;
+        vertical-align: top;
         margin-left: 10px;
         overflow: scroll;
 
@@ -82,11 +92,41 @@ $blue: #66D9EF;
 
     & .time-stamp {
         width: 18%;
-        // float: right;
         vertical-align: top;
         color: #fff;
         margin-left: 10px;
     }
 
 }
+
+.login-wrapper {
+    height: 600px;
+    width: 800px;
+    margin: 25px auto;
+    border: 1px solid black; 
+    text-align: center;
+    transition: all .5s linear;
+
+    & .login-request {
+        margin-top: 50px;
+     
+    }
+
+    & .login-box {
+        height: 200px;
+        width: 400px;
+        margin: 200px auto 0px;
+        border: 1px solid black;
+
+        & .login-name {
+            width: 300px;
+            margin-top: 10px;
+            display: block;
+            margin-left: 50px;
+            margin-bottom: 10px;
+        }
+    }
+
+}
+
 

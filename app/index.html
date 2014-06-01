@@ -26,18 +26,26 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <div class="login-wrapper">
+            <div class="login-box">
+                <div class="login-request">Please create a username</div>
+                <input type="text" minlength="1" class="login-name" autofocus="autofocus">
+                <button class="login">Login</button>
+            </div>
 
-        <div class="messages-wrapper">
+        </div>
+
+        <div class="messages-wrapper hide-me">
             <div class="messages-container">
                 <ul class="message-list">
 
                 </ul>
-
             </div>
         </div>
-        <div class="text-wrapper">
-            <input type="text" name="message-content"  minlength="1" autofocus="autofocus">
-            <button>Send</button>
+        <div class="text-wrapper hide-me">
+            <div class="display-name">Chatting as: </div>
+            <input type="text" class="message-text"name="message-content"  minlength="1" autofocus="autofocus">
+            <button class="message-send">Send</button>
         </div>
 
 
